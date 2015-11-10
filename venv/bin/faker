@@ -1,0 +1,10 @@
+#!/home/saurabh/Projects/python/django-projects/django_bootstrap/venv/bin/python3.4
+# EASY-INSTALL-ENTRY-SCRIPT: 'fake-factory==0.5.3','console_scripts','faker'
+__requires__ = 'fake-factory==0.5.3'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('fake-factory==0.5.3', 'console_scripts', 'faker')()
+    )
