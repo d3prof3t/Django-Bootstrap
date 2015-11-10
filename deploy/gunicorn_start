@@ -6,8 +6,8 @@
 NAME="django_bootstrap"                                         # Name of the application
 VIRTUALENV="/opt/cricket_fantasy_project/venv"                  # Path to virtualenv
 DJANGODIR="/opt/cricket_fantasy_project"                        # Django Project Directory
-USER=root                                                       # the user to run as
-GROUP=root                                                      # the group to run as
+USER=saurabh                                                    # the user to run as
+GROUP=saurabh                                                   # the group to run as
 NUM_WORKERS=3                                                   # No. of worker processes Gunicorn should spawn
 DJANGO_SETTINGS_MODULE=config.settings.production               # Settings file that Gunicorn should use
 DJANGO_WSGI_MODULE=config.wsgi                                  # WSGI module name
