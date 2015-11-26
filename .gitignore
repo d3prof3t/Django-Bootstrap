@@ -61,3 +61,6 @@ django_bootstrap/media/
 
 # Hitch directory
 tests/.hitch
+
+# VirtualEnv
+venv/
