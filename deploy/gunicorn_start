@@ -4,7 +4,7 @@
 ### =====================================================================================================================
 
 NAME="django_bootstrap"                                         # Name of the application
-VIRTUALENV="/opt/django_bootstrap/venv"                         # Path to virtualenv
+VIRTUALENV="/opt/django_bootstrap/.env"                         # Path to virtualenv
 DJANGODIR="/opt/django_bootstrap"                               # Django Project Directory
 USER=<non-root-user>                                            # the user to run as
 GROUP=<non-root-user>                                           # the group to run as
