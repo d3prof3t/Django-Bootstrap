@@ -47,7 +47,7 @@ def start_provision():
     sed('/etc/ssh/sshd_config', '^PermitRootLogin yes', 'PermitRootLogin no')
     sed('/etc/ssh/sshd_config', '^#PasswordAuthentication yes', 'PasswordAuthentication no')
 
-    # upgrade_server()
+    upgrade_server()
     create_deployers_group()
     ceate_deployer_user()
     upload_keys()
