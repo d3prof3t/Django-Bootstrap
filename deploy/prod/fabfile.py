@@ -16,7 +16,7 @@ Fabric Script which does the following things:
 env.user = 'root'
 
 # List of remote IP's
-env.hosts = ['188.166.189.143', '188.166.176.126']
+env.hosts = ['188.166.189.143']
 
 # Password for the remote server
 env.password = '<your-server-password>'
