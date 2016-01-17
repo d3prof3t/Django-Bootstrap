@@ -16,13 +16,13 @@ Fabric Script which does the following things:
 env.user = 'root'
 
 # List of remote IP's
-env.hosts = ['188.166.189.143']
+env.hosts = ['<server-ip-address>']
 
 # Password for the remote server
 env.password = '<your-server-password>'
 
 # SSH keys path
-env.ssh_keys_dir = '~/Projects/python/django-projects/django-deployments-stuff/prod_servers_config'
+env.ssh_keys_dir = '~/Projects/python/django-projects/prod_servers_config'
 
 # Full name of the user
 env.full_name_user = 'Saurabh Sharma'
@@ -58,7 +58,9 @@ def upgrade_server():
     """
     Upgrade the server as a root user
     """
-    run('dnf upgrade -y')
+    # run('dnf upgrade -y')
+    # optional command(had to use for my Fedora 23 Server)
+    run('dnf install python')
 
 
 def create_deployers_group():
@@ -67,7 +69,7 @@ def create_deployers_group():
     """
     run('groupadd {}'.format(env.user_group))
     run('mv /etc/sudoers /etc/sudoers-backup')
-    run('(cat /etc/sudoers-backup ; echo "%' + env.user_group + 'ALL=(ALL) ALL") > /etc/sudoers')
+    run('(cat /etc/sudoers-backup; echo "%' + env.user_group + ' ALL=(ALL) ALL") > /etc/sudoers')
     run('chmod 440 /etc/sudoers')
 
 
