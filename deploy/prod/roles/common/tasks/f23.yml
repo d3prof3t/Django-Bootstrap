@@ -1,0 +1,17 @@
+##
+# updates the DNF package cache and install packages
+# servers necessary for web.
+##
+- name: ensure web server packages are installed
+  dnf: name={{item}} state=latest
+  become: yes
+  with_items:
+    - fail2ban
+    - postgresql-server
+    - postgresql-contrib
+    - postgresql-devel
+    - python3-devel
+    - python-devel
+    - gcc
+    - nginx
+    - git

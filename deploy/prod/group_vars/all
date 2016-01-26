@@ -1,0 +1,4 @@
+app_name: django-bootstrap
+deployer_user: deployer
+deployer_group: deployers
+ssh_dir: ~/Projects/python/django-projects/prod_servers_config

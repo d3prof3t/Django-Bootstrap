@@ -16,10 +16,10 @@ Fabric Script which does the following things:
 env.user = 'root'
 
 # List of remote IP's
-env.hosts = ['<server-ip-address>']
+env.hosts = ['128.199.70.225']
 
 # Password for the remote server
-env.password = '<your-server-password>'
+env.password = 'log10tobaseX'
 
 # SSH keys path
 env.ssh_keys_dir = '~/Projects/python/django-projects/prod_servers_config'
@@ -48,9 +48,11 @@ def start_provision():
     sed('/etc/ssh/sshd_config', '^#PasswordAuthentication yes', 'PasswordAuthentication no')
 
     upgrade_server()
+    install_ansible_dependency()
     create_deployers_group()
     ceate_deployer_user()
     upload_keys()
+    run('service sshd reload')
 
 
 
@@ -60,8 +62,14 @@ def upgrade_server():
     """
     # run('dnf upgrade -y')
     # optional command(had to use for my Fedora 23 Server)
-    run('dnf install python')
+    run('dnf install -y python')
 
+def install_ansible_dependency():
+    """
+    Install the python-dnf module for making Ansible
+    communicate with the Fedora's Package Manager
+    """
+    run('dnf install -y python-dnf')
 
 def create_deployers_group():
     """
