@@ -64,3 +64,6 @@ tests/.hitch
 
 # RopeProject
 .ropeproject/
+
+# Gunicorn_start script
+deploy/gunicorn_start
