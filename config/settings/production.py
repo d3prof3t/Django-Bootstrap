@@ -96,7 +96,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # ------------------------
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # STATICFILES_STORAGE = DEFAULT FILE STORAGE
-STATIC_URL = MEDIA_URL
+# STATIC_URL = MEDIA_URL
 
 
 # EMAIL
