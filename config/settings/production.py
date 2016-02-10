@@ -55,7 +55,7 @@ SESSION_COOKIE_HTTPONLY = True
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
 # ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com'])
-ALLOWED_HOSTS = ['128.199.75.205']
+ALLOWED_HOSTS = ['128.199.96.60']
 # END SITE CONFIGURATION
 
 INSTALLED_APPS += ("gunicorn", )
